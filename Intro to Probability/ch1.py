@@ -72,3 +72,26 @@ for k in range (1,np.size(outcomeMatrix,0)+1):
     
 
 #%%
+#3: Write a program to simulate the roll of three dice a large number of times and keep track of the proportion of times that the sum is 9 and the proportion of times it is 10. 
+
+totalRolls = 0
+count9 = 0
+count10 = 0
+
+for i in range(0,1000000):
+    roll1 = random.randint(1,6)
+    roll2 = random.randint(1,6)
+    roll3 = random.randint(1,6)
+    sumroll = roll1 + roll2 + roll3
+    if sumroll == 9:
+        count9 = count9 + 1
+    elif sumroll == 10:
+        count10 = count10 + 1
+    totalRolls = totalRolls + 1
+
+print(totalRolls)
+print("Proportion of nines: " + str(count9/totalRolls))
+print("Proportion of tens: " + str(count10/totalRolls))
+    
+    
+#%%
